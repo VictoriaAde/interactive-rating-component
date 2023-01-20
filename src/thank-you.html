@@ -16,19 +16,18 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./scss/style.scss" />
+    <script src="./js/script.js" defer></script>
     <title>Frontend Mentor | Interactive rating component</title>
   </head>
   <body>
-    <!-- Rating state start -->
     <div class="container">
       <div class="thankyou">
-        <!-- Thank you state start -->
         <div class="thankyou__img">
           <img src="./images/illustration-thank-you.svg" alt="" />
         </div>
         <p class="thankyou__ratingmsg">
           You selected
-          <span>3</span>
+          <span id="selectedRate">3</span>
           out of 5
         </p>
         <h1>Thank you!</h1>
@@ -36,9 +35,8 @@
           We appreciate you taking the time to give a rating. If you ever need
           more support, don’t hesitate to get in touch!
         </p>
-
-        <!-- Thank you state end -->
       </div>
+
       <div class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
