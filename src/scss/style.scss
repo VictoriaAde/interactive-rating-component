@@ -11,14 +11,7 @@
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--verydark-blue);
   font-family: "Roboto", sans-serif;
 }
 h1,
@@ -29,22 +22,24 @@ h4 {
 }
 .container {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  //   margin: 3rem auto;
+  gap: 4rem;
   background-color: var(--medium-blue);
-  @include media(1000px) {
-    height: 90%;
-  }
 }
 .ratingcard {
   background-color: var(--dark-blue);
   width: 280px;
   height: 400px;
+  margin-top: 4rem;
   padding: 2rem 1rem;
+  border-radius: 10px;
+  @include media(1000px) {
+    width: 280px;
+  }
   &__icon-star-container {
     width: 30px;
     height: 30px;
@@ -69,6 +64,20 @@ h4 {
       display: flex;
       justify-content: center;
       align-items: center;
+      cursor: pointer;
+      transition: all 0.2s ease-in;
+
+      &:hover {
+        background-color: var(--primary);
+        color: var(--white);
+        font-weight: bold;
+      }
+      &:active {
+        background-color: var(--light-grey);
+      }
+      &:visited {
+        background-color: var(--light-grey);
+      }
     }
   }
   h1 {
@@ -77,11 +86,24 @@ h4 {
     color: var(--white);
   }
   p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: var(--light-grey);
   }
-  @include media(1000px) {
-    width: 280px;
+  &__submit {
+    background-color: var(--primary);
+    text-decoration: none;
+    color: var(--white);
+    width: 100%;
+    padding: 0.6rem 0;
+    display: block;
+    text-align: center;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.2s ease-in;
+    &:hover {
+      background-color: var(--white);
+      color: var(--primary);
+    }
   }
 }
 .thankyou {
@@ -89,10 +111,33 @@ h4 {
   width: 280px;
   height: 400px;
   padding: 2rem 1rem;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 4rem;
+
   &__img {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 0 1.6rem;
+  }
+
+  &__ratingmsg {
+    font-size: 0.7rem !important;
+    color: var(--primary) !important;
+    background-color: hsl(213, 20%, 23%);
+    border-radius: 10px;
+    padding: 0.3rem 0.8rem;
+    display: inline;
+  }
+  h1 {
+    margin: 2rem 0 0.8rem;
+    font-size: 1.5rem;
+    color: var(--white);
+  }
+  p {
+    font-size: 0.8rem;
+    color: var(--light-grey);
   }
 }
 .attribution {
