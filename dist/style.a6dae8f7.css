@@ -112,6 +112,7 @@ h4 {
   border-radius: 20px;
   font-weight: bold;
   transition: all 0.2s ease-in;
+  border: none;
 }
 .ratingcard__submit:hover {
   background-color: var(--white);
@@ -149,6 +150,14 @@ h4 {
 .thankyou p {
   font-size: 0.8rem;
   color: var(--light-grey);
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
 }
 
 .attribution {
