@@ -82,9 +82,9 @@ h4 {
   transition: all 0.2s ease-in;
 }
 .ratingcard__numbers div:hover {
-  background-color: var(--primary);
-  color: var(--white);
-  font-weight: bold;
+  background-color: var(--primary) !important;
+  color: var(--white) !important;
+  font-weight: bold !important;
 }
 .ratingcard__numbers div:active {
   background-color: var(--light-grey);

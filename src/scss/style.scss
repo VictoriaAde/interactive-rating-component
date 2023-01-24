@@ -68,9 +68,9 @@ h4 {
       transition: all 0.2s ease-in;
 
       &:hover {
-        background-color: var(--primary);
-        color: var(--white);
-        font-weight: bold;
+        background-color: var(--primary) !important;
+        color: var(--white) !important;
+        font-weight: bold !important;
       }
       &:active {
         background-color: var(--light-grey);
@@ -147,6 +147,15 @@ h4 {
 .show {
   display: block;
 }
+// .notselected {
+//   background-color: var(--dark-blue);
+//   color: var(--light-grey);
+//   font-weight: bold;
+// }
+// .selected {
+//   background-color: var(--light-grey);
+//   color: var(--white);
+// }
 .attribution {
   color: aliceblue;
   font-size: 0.7rem;

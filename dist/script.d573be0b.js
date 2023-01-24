@@ -123,19 +123,28 @@ rate.forEach(function (el) {
   return el.addEventListener("click", rateFunc);
 });
 function rateFunc(e) {
-  //change background color when when you select
   e.target.style.backgroundColor = "hsl(217, 12%, 63%)";
   e.target.style.color = "white";
+  // e.target.classList.add("selected");
+
   var rateNumber = e.target.innerHTML;
-  console.log(rateNumber);
-  // let showRateDom = document.getElementById("rateNumberDom");
-  // showRateDom.innerHTML = rateNumber;
+  var showRateDom = document.getElementById("rateNumberDom");
+  showRateDom.innerHTML = rateNumber;
+  var currentSelected = e.target.id;
+  rate.forEach(function (el) {
+    if (el.id !== currentSelected) {
+      el.style.backgroundColor = "hsl(213, 20%, 23%)";
+      el.style.color = "hsl(217, 12%, 63%)";
+      // el.classList.add("notselected");
+    }
+  });
 }
 
 document.querySelector(".ratingcard__submit").addEventListener("click", function () {
   document.querySelector(".ratingcard").classList.add("hide");
   document.querySelector(".thankyou").classList.remove("hide");
   document.querySelector(".thankyou").classList.add("show");
+  console.log();
 });
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -162,7 +171,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43949" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33645" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
